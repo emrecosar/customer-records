@@ -24,7 +24,7 @@ import com.emrecosar.customerrecords.service.DistanceCalculationService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = CustomerRecordsApplication.class)
-public class DistanceCalculationControllerTest {
+public class CustomerRecordsControllerTest {
 
 	@Mock
 	DistanceCalculationService distanceCalculationService;
@@ -35,7 +35,7 @@ public class DistanceCalculationControllerTest {
 
 	@Before
 	public void setup() {
-		mvc = MockMvcBuilders.standaloneSetup(new DistanceCalculationController(distanceCalculationService)).build();
+		mvc = MockMvcBuilders.standaloneSetup(new CustomerRecordsController(distanceCalculationService)).build();
 	}
 
 	@Test

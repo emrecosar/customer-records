@@ -16,12 +16,12 @@ import com.emrecosar.customerrecords.domain.Customer;
 import com.emrecosar.customerrecords.service.DistanceCalculationService;
 
 @RestController
-public class DistanceCalculationController {
+public class CustomerRecordsController {
 
 	DistanceCalculationService distanceCalculationService;
 	
 	@Autowired
-	public DistanceCalculationController(DistanceCalculationService distanceCalculationService) {
+	public CustomerRecordsController(DistanceCalculationService distanceCalculationService) {
 		this.distanceCalculationService = distanceCalculationService;
 	}
 
