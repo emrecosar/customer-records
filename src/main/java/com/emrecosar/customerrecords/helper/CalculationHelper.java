@@ -15,6 +15,7 @@ public class CalculationHelper {
 		double officeLatitude = Math.toRadians(office.getLatitude());
 		double officeLongitude = Math.toRadians(office.getLongitude());
 
+		// law of cosines
 		double angle = Math.acos(Math.sin(customerLatitude) * Math.sin(officeLatitude) + Math.cos(customerLatitude)
 				* Math.cos(officeLatitude) * Math.cos(customerLongitude - officeLongitude));
 

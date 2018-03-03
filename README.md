@@ -5,8 +5,8 @@ You can use the first formula from [this Wikipedia article](https://en.wikipedia
 The GPS coordinates for our Dublin office are 53.339428, -6.257664.
 You can find the Customer list [here](https://gist.githubusercontent.com/brianw/19896c50afa89ad4dec3/raw/6c11047887a03483c50017c1d451667fd62a53ca/gistfile1.txt).
  	
-* Solution is Spring-Boot Maven project. just clone, build and run!
-* Range parameter in the URL is optional, default value is 100. If you prefer to change, check the results.
+* Solution specifications are; Spring-Boot 2.0.0, Maven and Java 8. Just clone, build and run!
+* Range parameter is optional, default value is 100. If you prefer to change, check the results.
 * Dublin Office location is stored in the application itself.
 * KM calculatios based on, each radian on a great circle of Earth is 6371 kilometers.
  	

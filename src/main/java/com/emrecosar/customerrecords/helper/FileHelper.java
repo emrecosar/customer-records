@@ -10,13 +10,13 @@ import java.nio.file.Files;
 public final class FileHelper {
 
 	public static final String PATH_TO_JSON = "json/";
-	
+
 	public static String readFile(String fileName) throws NullPointerException, IOException {
 
 		ClassLoader classLoader = new FileHelper().getClass().getClassLoader();
-        File file = new File(classLoader.getResource(PATH_TO_JSON + fileName).getFile());
-		
-        return new String(Files.readAllBytes(file.toPath()));
+		File file = new File(classLoader.getResource(PATH_TO_JSON + fileName).getFile());
+
+		return new String(Files.readAllBytes(file.toPath()));
 	}
 
 	public static String readFile(URL fileUrl) throws IOException {

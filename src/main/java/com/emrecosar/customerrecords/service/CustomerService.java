@@ -9,5 +9,5 @@ import com.emrecosar.customerrecords.domain.Customer;
 public interface CustomerService {
 
 	List<Customer> getCustomers(URL url) throws IOException;
-	
+
 }

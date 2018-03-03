@@ -14,14 +14,14 @@ import com.emrecosar.customerrecords.domain.Office;
 import com.emrecosar.customerrecords.helper.CalculationHelper;
 
 @Service
-public class DistanceCalculationServiceImpl implements DistanceCalculationService{
-	
+public class DistanceCalculationServiceImpl implements DistanceCalculationService {
+
 	private final String OFFICE_FILE_NAME = "dublin.json";
-	
+
 	CustomerService customerService;
 
 	OfficeService officeService;
-	
+
 	@Autowired
 	public DistanceCalculationServiceImpl(CustomerService customerService, OfficeService officeService) {
 		this.customerService = customerService;
@@ -31,7 +31,7 @@ public class DistanceCalculationServiceImpl implements DistanceCalculationServic
 	@Override
 	public List<Customer> findCustomersInRange(Integer range, URL customerUrl) throws IOException {
 		// TODO Auto-generated method stub
-		
+
 		// get customer and office
 		List<Customer> customerList = customerService.getCustomers(customerUrl);
 		Office office = officeService.getOffice(OFFICE_FILE_NAME);
@@ -42,11 +42,11 @@ public class DistanceCalculationServiceImpl implements DistanceCalculationServic
 
 		// sort
 		Collections.sort(inRangeCustomerList);
-		
+
 		// print out result as you requested
 		inRangeCustomerList.forEach(System.out::println);
-		
+
 		return inRangeCustomerList;
 	}
-	
+
 }

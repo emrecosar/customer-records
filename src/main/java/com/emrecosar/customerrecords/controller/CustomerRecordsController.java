@@ -19,21 +19,22 @@ import com.emrecosar.customerrecords.service.DistanceCalculationService;
 public class CustomerRecordsController {
 
 	DistanceCalculationService distanceCalculationService;
-	
+
 	@Autowired
 	public CustomerRecordsController(DistanceCalculationService distanceCalculationService) {
 		this.distanceCalculationService = distanceCalculationService;
 	}
 
 	@GetMapping("/get-invited-customers")
-	public ResponseEntity<List<Customer>> getInvitedCustomers(@RequestParam(value = "range", required = false, defaultValue = "100") Integer range,
+	public ResponseEntity<List<Customer>> getInvitedCustomers(
+			@RequestParam(value = "range", required = false, defaultValue = "100") Integer range,
 			@RequestParam(value = "customerUrl", required = true) URL customerUrl) throws IOException {
 
 		List<Customer> invitedCustomers = distanceCalculationService.findCustomersInRange(range, customerUrl);
 
-		if(CollectionUtils.isEmpty(invitedCustomers))
+		if (CollectionUtils.isEmpty(invitedCustomers))
 			return new ResponseEntity<List<Customer>>(HttpStatus.NOT_FOUND);
-			
+
 		return new ResponseEntity<List<Customer>>(invitedCustomers, HttpStatus.OK);
 	}
 
