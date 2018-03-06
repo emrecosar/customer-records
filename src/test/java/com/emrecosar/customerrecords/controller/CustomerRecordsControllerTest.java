@@ -1,5 +1,6 @@
 package com.emrecosar.customerrecords.controller;
 
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -9,32 +10,25 @@ import java.util.ArrayList;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.mockito.Matchers;
-import org.mockito.Mock;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import com.emrecosar.customerrecords.CustomerRecordsApplication;
 import com.emrecosar.customerrecords.domain.Customer;
 import com.emrecosar.customerrecords.helper.TestHelper;
 import com.emrecosar.customerrecords.service.DistanceCalculationService;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = CustomerRecordsApplication.class)
 public class CustomerRecordsControllerTest {
 
-	@Mock
 	DistanceCalculationService distanceCalculationService;
 
 	MockMvc mvc;
 
-	private final String URL = "/get-invited-customers";
+	private final String URL = "/customers/get-invited";
 
 	@Before
 	public void setup() {
+		distanceCalculationService = mock(DistanceCalculationService.class);
 		mvc = MockMvcBuilders.standaloneSetup(new CustomerRecordsController(distanceCalculationService)).build();
 	}
 
