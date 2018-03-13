@@ -1,4 +1,4 @@
-[![Circle CI](https://circleci.com/gh/emrecosar/customer-records.png?style=badge)](https://circleci.com/gh/emrecosar/customer-records)
+[![Build Status](https://travis-ci.org/emrecosar/customer-records.svg?branch=master)](https://travis-ci.org/emrecosar/customer-records)
 
 ## Customer Records ##
  
