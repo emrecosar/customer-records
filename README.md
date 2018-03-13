@@ -1,14 +1,14 @@
 ## Customer Records ##
  
 We have some customer records in a text file (ex: customers.json) -- one customer per line, JSON-encoded. We want to invite any customer within 100km of our Dublin office for some food and drinks on us. Write a program that will read the full list of customers and output the names and user ids of matching customers (within 100km), sorted by User ID (ascending).
-You can use the first formula from [this Wikipedia article](https://en.wikipedia.org/wiki/Great-circle_distance) to calculate distance. Don't forget, you'll need to convert degrees to radians.
+You can use the first formula(law of cosines) from [this Wikipedia article](https://en.wikipedia.org/wiki/Great-circle_distance) to calculate distance. Don't forget, you'll need to convert degrees to radians.
 The GPS coordinates for our Dublin office are 53.339428, -6.257664.
 You can find the Customer list [here](https://gist.github.com/emrecosar/763aeb36d4ba4aa616496f674fe41b65).
  	
-* Solution specifications are; Spring-Boot 2.0.0, Maven and Java 8. Just clone, build and run!
-* Range parameter is optional, default value is 100. If you prefer to change, check the results.
+* Solution specifications; Spring-Boot 2.0.0, Maven and Java 8, embed-Tomcat. Just clone, build and run!
+* Range parameter is optional, default value is 100. You can change the range if you prefer.
 * Dublin Office location is stored in the application itself.
-* KM calculations based on, each radian on a great circle of Earth is 6371 kilometers.
+* KM calculation is based on, each radian on a great circle of Earth is 6371 kilometers.
  	
 *Example* 
 

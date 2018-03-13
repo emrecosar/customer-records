@@ -18,6 +18,9 @@ public class CustomerServiceImpl implements CustomerService {
 	public CustomerServiceImpl() {
 	}
 
+	/*
+	 * @see com.emrecosar.customerrecords.service.CustomerService#getCustomers(java.net.URL)
+	 */
 	@Override
 	public List<Customer> getCustomers(URL url) throws IOException {
 

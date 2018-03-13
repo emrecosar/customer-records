@@ -17,6 +17,9 @@ public class OfficeServiceImpl implements OfficeService {
 	public OfficeServiceImpl() {
 	}
 
+	/*
+	 * @see com.emrecosar.customerrecords.service.OfficeService#getOffice(java.lang.String)
+	 */
 	@Override
 	public Office getOffice(String fileName) throws JsonSyntaxException, NullPointerException, IOException {
 

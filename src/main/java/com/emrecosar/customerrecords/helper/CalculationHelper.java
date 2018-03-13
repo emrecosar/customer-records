@@ -23,7 +23,6 @@ public class CalculationHelper {
 			throw new CalculationIsNotValidException(currentCustomer.getLatitude(), currentCustomer.getLongitude(),
 					office.getLatitude(), office.getLongitude());
 
-		// each radian on a great circle of Earth is 6371 kilometers
 		return EACH_RADIAN_ON_A_GREAT_CIRCLE_IN_KM * angle;
 	}
 

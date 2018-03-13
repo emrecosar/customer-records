@@ -28,22 +28,24 @@ public class DistanceCalculationServiceImpl implements DistanceCalculationServic
 		this.officeService = officeService;
 	}
 
+	/*
+	 * @see com.emrecosar.customerrecords.service.DistanceCalculationService#findCustomersInRange(java.lang.Integer, java.net.URL)
+	 */
 	@Override
 	public List<Customer> findCustomersInRange(Integer range, URL customerUrl) throws IOException {
-		// TODO Auto-generated method stub
-
-		// get customer and office
+		
+		// get customers and office
 		List<Customer> customerList = customerService.getCustomers(customerUrl);
 		Office office = officeService.getOffice(OFFICE_FILE_NAME);
 
-		// calculate and filter
+		// calculate distance and filter
 		List<Customer> inRangeCustomerList = customerList.stream()
 				.filter(c -> range >= CalculationHelper.calculateDistance(c, office)).collect(Collectors.toList());
 
-		// sort
+		// sort customer list
 		Collections.sort(inRangeCustomerList);
 
-		// print out result as you requested
+		// print out result to system log if you wish
 		inRangeCustomerList.forEach(System.out::println);
 
 		return inRangeCustomerList;
