@@ -21,6 +21,7 @@ import com.emrecosar.customerrecords.domain.Customer;
 import com.emrecosar.customerrecords.domain.Office;
 import com.emrecosar.customerrecords.helper.TestHelper;
 
+@SuppressWarnings("deprecation")
 @RunWith(MockitoJUnitRunner.class)
 public class DistanceCalculationServiceImplTest {
 

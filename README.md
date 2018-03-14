@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/emrecosar/customer-records.svg?branch=master)](https://travis-ci.org/emrecosar/customer-records)
+[![codecov](https://codecov.io/gh/emrecosar/customer-records/branch/master/graph/badge.svg)](https://codecov.io/gh/emrecosar/customer-records)
 
 ## Customer Records ##
  

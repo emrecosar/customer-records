@@ -18,6 +18,7 @@ import com.emrecosar.customerrecords.domain.Customer;
 import com.emrecosar.customerrecords.helper.TestHelper;
 import com.emrecosar.customerrecords.service.DistanceCalculationService;
 
+@SuppressWarnings("deprecation")
 public class CustomerRecordsControllerTest {
 
 	DistanceCalculationService distanceCalculationService;
